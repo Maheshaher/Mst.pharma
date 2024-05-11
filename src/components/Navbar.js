@@ -8,9 +8,12 @@ function Navbar() {
   }
 
   return (
-    <nav className="flex justify-around width-[1157px] h-20 bg-slate-400 items-center">
-      <div>
-        <p className="tracking-widest text-black font-bold text-xl">
+    <nav className=" nav flex justify-around width-[1157px] h-20 items-center shadow-sm fixed top-0 left-0 right-0 z-20">
+      <div className="flex gap-1">
+      <div className="p-1">
+          <img  className="h-[25px] w-[25px]" src="/images/icon1.png"></img>
+        </div>
+        <p className="tracking-[7px] text-black font-bold text-xl">
           MST PHARMA
         </p>
       </div>

@@ -72,14 +72,30 @@ function ProductDetails() {
   const params = useParams();
   const pid = params.Productid;
   console.log("ppppppppiiiiiiidddddddd", pid);
-
-  const pdata = data;
+  console.log(typeof pid);
+  let pdata = data;
   console.log("pppprrrrrdddddddd", pdata);
- 
-
-  const singleProduct = pdata.find((e) => e.id === parseInt(pid));
-
+  let singleProduct = pdata.find((e) => e.id == pid);
   console.log(singleProduct);
+
+  return (
+    <div className="   flex gap-20 h-[720px] w-[703px] m-auto">
+      <div className="h-auto w-[400px] ">
+        <img
+          className="h-[400px] w-[300px] border-2 rounded-[4px] overflow-hidden shadow-xl p-4"
+          src={singleProduct.images}
+        ></img>
+      </div>
+      <div className="w-[400px]">
+        <div>
+          <p className="font- tracking-widest text-3xl">{singleProduct.desc}</p>
+        </div>
+        <div className="pt-5 leading-7 ">
+          <p>{singleProduct.descs}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ProductDetails;

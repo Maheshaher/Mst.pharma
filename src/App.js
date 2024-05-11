@@ -9,6 +9,7 @@ import About from "./components/About";
 import data from "./Data";
 import Contact from "./components/Contact";
 import ProductDetails from "./components/ProductDetails";
+// import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
         <Route
           path="/Store/:Productid"
           element={<ProductDetails></ProductDetails>}
-        ></Route>
+        ></Route> 
       </Routes>
       <Footer></Footer>
     </div>

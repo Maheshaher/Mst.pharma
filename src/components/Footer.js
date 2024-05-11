@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="bg-pink-800 h-[550px] ">
+    <div className="bg-teal-50 h-[550px] ">
       <footer className=" flex justify-evenly items-center h-[300px]">
         <div className="">
           <div>
