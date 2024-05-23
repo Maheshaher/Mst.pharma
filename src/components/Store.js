@@ -1,6 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
+import Pagination from "./Pagination";
+import { useContext } from "react";
+import { ContextApi } from "../context/ContextApi";
 
 function Store(props) {
+  const { Page } = useContext(ContextApi);
+  console.log("Page number is ..", Page);
   const storedata = props.storedata;
   // const [pdetails, Setpdetails] = useState([]);
 
@@ -16,11 +21,11 @@ function Store(props) {
 
   return (
     <div className=" h-auto pt-[80px]">
-      <div className="h-[60px] p-[16px] ml-[220px]">
+      <div className="h-[60px] p-[16px] ml-[145px] sm:ml-[62px] md:ml-[104px] sm:pt-8 lg:ml-[220px]">
         <div className="flex gap-2 ">
           <button onClick={NavigateHandler}>Home</button>
           <span>/</span>
-          <strong>Contact</strong>
+          <strong>Store</strong>
         </div>
       </div>
 
@@ -41,8 +46,8 @@ function Store(props) {
 
       {/* Productssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */}
 
-      <div className="w-[70vw]  grid grid-cols-4 m-auto ">
-        {storedata.map((val) => {
+      <div className="w-[70vw] sm:w-[80vw] lg:w-[70vw]  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-auto ">
+        {storedata[Page].map((val) => {
           return (
             <div
               key={val.id}
@@ -68,8 +73,9 @@ function Store(props) {
           );
         })}
       </div>
-      <section className=" h-[400px] relative flex gap-24 justify-center items-center bg-teal-500  mt-9">
-        <div className="w-[440px] h-[300px] shadow-2xl rounded-sm overflow-hidden transation duration-300 hover:scale-[1.1] transform">
+      <Pagination></Pagination>
+      <section className=" h-[px] relative flex flex-col gap-4 lg:gap-[100px] justify-center items-center bg-teal-500 p-6 md:flex-row lg:flex-row">
+        <div className="w-[380px] lg:w-[440px] h-[300px] shadow-2xl rounded-sm overflow-hidden transation duration-300 hover:scale-[1.1] transform">
           <img
             src="/images/flipedbluewhite.png"
             className="max-w-[100%] h-[100%] loading-lazy blur-[1.5px] object-fill  "
@@ -77,17 +83,17 @@ function Store(props) {
           {/* <div className="max-w-[100%] h-[100%] bg-teal-500 rounded-sm  ">
 
           </div> */}
-          <div className=" z-10 absolute top-6 w-[200px] p-7 ml-2">
+          <div className=" z-10 absolute top-6 w-[400px] p-7 ml-2">
             <h2 className="text-3xl font-bold tracking-wide ">
               MST PHARMA Products
             </h2>
-            <p className="mt-3 leading-7">
+            <p className="mt-3 leading-7 w-[250px]">
               Good Medicine for Good Health. Be Healthy
             </p>
           </div>
         </div>
 
-        <div className="w-[440px] h-[300px] shadow-2xl rounded-sm overflow-hidden transation duration-300 hover:scale-[1.1] transform">
+        <div className=" w-[380px] lg:w-[440px] h-[300px] shadow-2xl rounded-sm overflow-hidden transation duration-300 hover:scale-[1.1] transform">
           {/* <img
             src="/images/whiteblue.jpg"
             className="max-w-[100%] h-[100%] loading-lazy "

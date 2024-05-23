@@ -33,7 +33,7 @@ function App() {
         <Route
           path="/Store/:Productid"
           element={<ProductDetails></ProductDetails>}
-        ></Route> 
+        ></Route>
       </Routes>
       <Footer></Footer>
     </div>

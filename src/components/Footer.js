@@ -1,10 +1,10 @@
 function Footer() {
   return (
-    <div className="bg-teal-50 h-[550px] ">
-      <footer className=" flex justify-evenly items-center h-[300px]">
-        <div className="">
+    <div className="bg-teal-50 h-[550px] p-4 ">
+      <footer className=" flex justify-evenly flex-col  md:flex-row md:gap-9 md:p-[60px] lg:flex-row lg:p-[100px]">
+        <div className="mb-5">
           <div>
-            <h3 className="mb-6">About Us</h3>
+            <h3 className="mb-2 mt-6"><strong>About Us</strong></h3>
             <p className="w-[300px] ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               quae reiciendis distinctio voluptates sed dolorum excepturi iure
@@ -14,7 +14,7 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="mb-6">Quick Links</h3>
+          <h3 className="mb-2"><strong>Quick Links</strong></h3>
           <ul>
             <li>Supplements</li>
             <li>Vitamins</li>

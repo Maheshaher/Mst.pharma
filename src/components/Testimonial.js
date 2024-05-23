@@ -9,12 +9,21 @@ function Testimonial() {
     dots: true,
     infinite: true,
     speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  var settingss = {
+    dots: true,
+    infinite: true,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
   };
   // const reviewData = reviewData;
   return (
-    <section className=" h-[550px] bg-gray-100 ">
+    <div>
+    <section className=" h-[550px] bg-gray-100 lg:invisible">
       <div className=" ">
         <p className="text-black text-2xl font-semibold text-center p-8">
           TESTIMONIALS
@@ -43,6 +52,39 @@ function Testimonial() {
         </div>
       </div>
     </section>
+
+    {/* <section className=" h-[550px] bg-gray-100 lg:visible ">
+      <div className=" ">
+        <p className="text-black text-2xl font-semibold text-center p-8">
+          TESTIMONIALS
+        </p>
+      </div>
+      <div className="flex justify-center items-center mt-7">
+        <div className=" w-[80vw] ">
+          <Slider {...settingss}>
+            {reviewData.map((review) => {
+              return (
+                <div className="bg-white w-[290px] h-[360px] rounded-md sha">
+                  <div className=" ">
+                    <img
+                      className="h-[100px] w-[100px] p-2 rounded-full"
+                      src={review.img}
+                    ></img>
+                  </div>
+                  <div className="p-2 mt-4">
+                    <p className="leading-6">{review.reviews}</p>
+                    <p className="mt-7">-{review.name}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+      </div>
+    </section> */}
+    
+    </div>
+    
   );
 }
 
